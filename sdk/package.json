@@ -1,0 +1,40 @@
+{
+  "name": "ghwd-sdk",
+  "version": "1.0.1",
+  "description": "GHWD official JavaScript/TypeScript SDK \u2014 Agent Discovery API client (health, site, catalog, OpenAPI).",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ghwd",
+    "ghwd-sdk",
+    "sdk",
+    "api-client",
+    "agent-discovery",
+    "openapi",
+    "brazil"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gutohipolito/ghwd-agents.git",
+    "directory": "sdk"
+  },
+  "homepage": "https://ghwd.com.br",
+  "bugs": {
+    "url": "https://github.com/gutohipolito/ghwd-agents/issues"
+  },
+  "author": "GHWD <contato@ghwd.com.br> (https://ghwd.com.br)"
+}
