@@ -1,5 +1,7 @@
 # ghwd-agents
 
+[![Smithery](https://smithery.ai/badge/gustavohip/ghwd)](https://smithery.ai/servers/gustavohip/ghwd)
+
 Public agent configs for [GHWD](https://ghwd.com.br) (the main site repo may be private).
 
 - `AGENTS.md` — coding-agent instructions
