@@ -8,7 +8,7 @@
   "skills": [
     {
       "name": "ghwd",
-      "path": "public/.well-known/agent-skills/ghwd/SKILL.md",
+      "path": "/.well-known/agent-skills/ghwd/SKILL.md",
       "url": "https://ghwd.com.br/.well-known/agent-skills/ghwd/SKILL.md"
     }
   ],
