@@ -2,13 +2,13 @@
   "$schema": "https://agent-plugins.org/schema/plugin.json",
   "name": "ghwd",
   "version": "1.0.0",
-  "description": "GHWD agent discovery plugin — skill + MCP references for ghwd.com.br",
+  "description": "GHWD agent discovery plugin \u2014 skill + MCP references for ghwd.com.br",
   "homepage": "https://ghwd.com.br/developers/",
   "repository": "https://github.com/gutohipolito/ghwd-agents",
   "skills": [
     {
       "name": "ghwd",
-      "path": "public/.well-known/agent-skills/ghwd/SKILL.md",
+      "path": "skills/ghwd/SKILL.md",
       "url": "https://ghwd.com.br/.well-known/agent-skills/ghwd/SKILL.md"
     }
   ],
