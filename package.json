@@ -1,0 +1,17 @@
+{
+  "name": "ghwd-agents",
+  "private": true,
+  "description": "Official GHWD Agent Plugin package (Agent Plugins 1.0.0) — skills + MCP for ghwd.com.br",
+  "homepage": "https://ghwd.com.br/developers/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gutohipolito/ghwd-agents.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-plugins",
+    "ghwd",
+    "mcp",
+    "agent-skills"
+  ]
+}
