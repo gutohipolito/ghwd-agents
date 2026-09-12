@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schema/plugin.json",
   "name": "ghwd",
-  "version": "1.0.0",
-  "description": "GHWD agent discovery plugin \u2014 skill + MCP references for ghwd.com.br",
+  "version": "1.0.1",
+  "description": "GHWD Agent Discovery plugin — skill + MCP for ghwd.com.br (Developer Tools / Agent Tools).",
   "homepage": "https://ghwd.com.br/developers/",
   "repository": "https://github.com/gutohipolito/ghwd-agents",
   "skills": [
