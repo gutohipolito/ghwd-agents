@@ -1,39 +1,22 @@
 {
-  "$schema": "https://agent-plugins.org/schema/plugin.json",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ghwd",
-  "version": "1.0.1",
-  "description": "GHWD Agent Discovery plugin — skill + MCP for ghwd.com.br (Developer Tools / Agent Tools).",
+  "version": "1.1.0",
+  "description": "GHWD Agent Discovery — skill + MCP for agent-readiness audit, pricing, and project briefs on ghwd.com.br.",
+  "author": {
+    "name": "GHWD",
+    "email": "contato@ghwd.com.br",
+    "url": "https://ghwd.com.br"
+  },
   "homepage": "https://ghwd.com.br/developers/",
   "repository": "https://github.com/gutohipolito/ghwd-agents",
-  "skills": [
-    {
-      "name": "ghwd",
-      "path": "skills/ghwd/SKILL.md",
-      "url": "https://ghwd.com.br/.well-known/agent-skills/ghwd/SKILL.md"
-    }
-  ],
-  "mcpServers": [
-    {
-      "name": "ghwd",
-      "url": "https://ghwd.com.br/mcp",
-      "transport": "streamable-http"
-    },
-    {
-      "name": "ghwd-docs",
-      "url": "https://ghwd.com.br/mcp/docs",
-      "transport": "streamable-http"
-    }
-  ],
-  "packages": [
-    {
-      "ecosystem": "npm",
-      "name": "ghwd-sdk",
-      "url": "https://www.npmjs.com/package/ghwd-sdk"
-    },
-    {
-      "ecosystem": "npm",
-      "name": "ghwd-cli",
-      "url": "https://www.npmjs.com/package/ghwd-cli"
-    }
+  "license": "MIT",
+  "keywords": [
+    "ghwd",
+    "agent-discovery",
+    "agent-readiness",
+    "mcp",
+    "brazil",
+    "developer-tools"
   ]
 }
