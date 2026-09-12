@@ -1,6 +1,6 @@
 {
   "name": "ghwd-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "CLI for GHWD Agent Discovery — health/site probes, agent-readiness audit, and project brief intake",
   "bin": {
     "ghwd": "ghwd.mjs"
