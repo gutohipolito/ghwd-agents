@@ -1,0 +1,33 @@
+{
+  "name": "ghwd-cli",
+  "version": "1.1.0",
+  "description": "CLI for GHWD Agent Discovery — health/site probes, agent-readiness audit, and project brief intake",
+  "bin": {
+    "ghwd": "ghwd.mjs"
+  },
+  "type": "module",
+  "files": [
+    "ghwd.mjs",
+    "lib/audit.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ghwd",
+    "agent",
+    "discovery",
+    "agent-readiness",
+    "audit",
+    "openapi",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gutohipolito/ghwd.git",
+    "directory": "cli"
+  },
+  "homepage": "https://ghwd.com.br/developers/"
+}

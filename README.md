@@ -1,31 +1,34 @@
 # GHWD Agents
 
-Agent-facing surfaces for [ghwd.com.br](https://ghwd.com.br): skills, MCP references, and the official `ghwd-sdk`.
+Agent-facing surfaces for [ghwd.com.br](https://ghwd.com.br): skills, MCP references, and the official `ghwd-sdk` / `ghwd-cli`.
 
-## Install skill (skills.sh / Agent Skills CLI)
+## Useful tools
+
+```bash
+# Score any site for agent readiness
+npx ghwd-cli audit https://example.com
+
+# Open a project brief
+npx ghwd-cli brief --name "Ana" --email ana@acme.com --message "Preciso de um site agent-ready"
+```
+
+## Install skill (skills.sh)
 
 ```bash
 npx skills add gutohipolito/ghwd-agents -g -y
-# or pin the skill name
-npx skills add gutohipolito/ghwd-agents --skill ghwd -g -y
 ```
-
-Skill source: [`skills/ghwd/SKILL.md`](./skills/ghwd/SKILL.md)
-
-## Agent plugins
-
-[`plugin.json`](./plugin.json) — Agent Plugins manifest pointing at MCP + skill.
 
 ## npm
 
 ```bash
 npm i ghwd-sdk
-npx ghwd-cli health
+npm i -g ghwd-cli
 ```
 
 ## Live endpoints
 
 - https://ghwd.com.br/llms.txt
 - https://ghwd.com.br/mcp
-- https://ghwd.com.br/ask
+- https://ghwd.com.br/api/v1/audit?url=https://example.com
+- https://ghwd.com.br/api/v1/brief
 - https://ghwd.com.br/developers/

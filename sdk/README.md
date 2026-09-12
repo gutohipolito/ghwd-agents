@@ -1,8 +1,8 @@
 # ghwd-sdk
 
-Official JavaScript SDK for the [GHWD Agent Discovery API](https://ghwd.com.br/openapi.json).
+Official JavaScript SDK for the [GHWD Agent Discovery API](https://ghwd.com.br/openapi.json) — plus a remote **agent-readiness auditor**.
 
-Homepage: https://ghwd.com.br/
+Homepage: https://ghwd.com.br/developers/
 
 ## Install
 
@@ -13,17 +13,35 @@ npm i ghwd-sdk
 ## Usage
 
 ```js
-import { GhwdClient } from "ghwd-sdk";
+import { GhwdClient, auditSite, formatAuditReport } from "ghwd-sdk";
 
 const ghwd = new GhwdClient();
-const site = await ghwd.site();
-const health = await ghwd.health();
-const catalog = await ghwd.catalog();
+console.log(await ghwd.health());
+console.log(await ghwd.site());
+
+// Audit any public site
+const report = await auditSite({ url: "https://example.com" });
+console.log(formatAuditReport(report));
+
+// Or via client
+console.log(await ghwd.audit("https://example.com"));
+
+// Open a project brief
+await ghwd.submitBrief({
+  name: "Ana",
+  email: "ana@acme.com",
+  message: "Quero tornar meu e-commerce agent-ready",
+  site_url: "https://example.com",
+  audit_grade: report.grade,
+  audit_score: report.percent,
+});
 ```
 
-```js
-const ghwd = new GhwdClient({ baseUrl: "https://ghwd.com.br" });
-console.log(await ghwd.pricingMarkdown());
+## CLI
+
+```bash
+npx ghwd-cli audit https://example.com
+npx ghwd-cli brief --name Ana --email ana@acme.com --message "…"
 ```
 
 ## Related

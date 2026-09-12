@@ -1,10 +1,14 @@
 /**
- * GHWD Agent Discovery SDK — thin typed client for the public read-only API.
+ * GHWD Agent Discovery SDK — thin typed client for the public read-only API,
+ * plus a remote agent-readiness auditor for any site.
  * @example
- * import { GhwdClient } from 'ghwd-sdk';
+ * import { GhwdClient, auditSite } from 'ghwd-sdk';
  * const ghwd = new GhwdClient();
  * console.log(await ghwd.health());
+ * console.log(await auditSite({ url: 'https://example.com' }));
  */
+import { auditSite, formatAuditReport, gradeFromScore, normalizeTargetUrl } from "./audit.js";
+
 const DEFAULT_BASE = "https://ghwd.com.br";
 
 export class GhwdClient {
@@ -77,6 +81,39 @@ export class GhwdClient {
     if (!res.ok) throw new Error(`GHWD pricing ${res.status}`);
     return res.text();
   }
+
+  /**
+   * Audit any public site for agent-readiness signals.
+   * @param {string} url
+   * @param {{ timeoutMs?: number }} [opts]
+   */
+  audit(url, opts = {}) {
+    return auditSite({ url, fetch: this.fetch, timeoutMs: opts.timeoutMs });
+  }
+
+  /**
+   * Submit a project brief (public intake — no auth).
+   * @param {{
+   *   name: string,
+   *   email: string,
+   *   message: string,
+   *   company?: string,
+   *   budget_band?: string,
+   *   stack?: string,
+   *   site_url?: string,
+   *   source?: string,
+   *   audit_score?: number,
+   *   audit_grade?: string
+   * }} brief
+   */
+  submitBrief(brief) {
+    return this.request("/api/v1/brief", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...brief, source: brief.source || "sdk" }),
+    });
+  }
 }
 
+export { auditSite, formatAuditReport, gradeFromScore, normalizeTargetUrl };
 export default GhwdClient;

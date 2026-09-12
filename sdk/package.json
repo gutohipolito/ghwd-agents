@@ -1,7 +1,7 @@
 {
   "name": "ghwd-sdk",
-  "version": "1.0.2",
-  "description": "GHWD official JavaScript/TypeScript SDK — Agent Discovery API client (health, site, catalog, OpenAPI).",
+  "version": "1.1.0",
+  "description": "GHWD official JS/TS SDK — Agent Discovery client, agent-readiness audit, and project brief intake.",
   "type": "module",
   "main": "./index.js",
   "module": "./index.js",
@@ -12,6 +12,7 @@
   "files": [
     "index.js",
     "index.d.ts",
+    "audit.js",
     "README.md"
   ],
   "engines": {
@@ -23,6 +24,8 @@
     "sdk",
     "api-client",
     "agent-discovery",
+    "agent-readiness",
+    "audit",
     "mcp",
     "openapi",
     "brazil",
